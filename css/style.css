@@ -45,6 +45,15 @@ body {
   border-radius: 6px;
 }
 
+.staff-photo {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
 .site-footer {
   background-color: #222;
   color: white;
