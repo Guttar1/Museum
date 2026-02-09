@@ -67,3 +67,65 @@ body {
   text-align: center;
   padding: 20px;
 }
+
+.ai-note {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 4px solid #444;
+  font-size: 0.95rem;
+}
+
+/* Container for each artifact */
+.collection-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 30px auto;
+  max-width: 1100px;
+  background-color: white;
+  padding: 18px;
+  border-radius: 8px;
+}
+
+/* THIS is the key fix */
+.collection-img {
+  width: 220px;        /* <<< controls image size */
+  max-width: 220px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;      /* prevents flexbox stretching */
+}
+
+/* Metadata layout */
+.collection-meta h2 {
+  margin-top: 0;
+}
+
+.meta-grid {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 14px;
+  font-size: 0.9rem;
+}
+
+/* Mobile layout */
+@media (max-width: 800px) {
+  .collection-item {
+    flex-direction: column;
+  }
+
+  .collection-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+}
